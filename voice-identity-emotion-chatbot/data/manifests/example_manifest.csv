@@ -1,0 +1,13 @@
+path,speaker_id,language,emotion,split
+raw/s01_neutral_001.wav,S01,zh,neutral,train
+raw/s02_happy_001.wav,S02,zh,happy,train
+raw/s03_angry_001.wav,S03,zh,angry,train
+raw/s04_sad_001.wav,S04,zh,sad,train
+raw/s05_neutral_001.wav,S05,zh,neutral,validation
+raw/s06_happy_001.wav,S06,zh,happy,validation
+raw/s07_angry_001.wav,S07,zh,angry,validation
+raw/s08_sad_001.wav,S08,zh,sad,validation
+raw/s09_neutral_001.wav,S09,zh,neutral,test
+raw/s10_happy_001.wav,S10,zh,happy,test
+raw/s11_angry_001.wav,S11,zh,angry,test
+raw/s12_sad_001.wav,S12,zh,sad,test
