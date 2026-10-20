@@ -1,0 +1,22 @@
+# Application-local rules for standalone copies
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+workspace/
+本機資料/
+external_models/
+work/
+data/raw/*
+!data/raw/README.md
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/README.md
+!data/processed/.gitkeep
+models/*
+!models/README.md
+!models/.gitkeep
+data/manifests/manifest.csv
