@@ -1,0 +1,25 @@
+# Private runtime data and environments
+**/.venv/
+**/.cache/
+**/__pycache__/
+**/.pytest_cache/
+**/*.py[cod]
+**/.env
+**/.env.*
+!**/.env.example
+**/workspace/
+**/本機資料/
+**/external_models/
+**/avatar_profiles/
+**/work/
+**/data/raw/*
+!**/data/raw/README.md
+!**/data/raw/.gitkeep
+**/data/processed/*
+!**/data/processed/README.md
+!**/data/processed/.gitkeep
+**/models/*
+!**/models/README.md
+!**/models/.gitkeep
+**/data/manifests/manifest.csv
+.DS_Store

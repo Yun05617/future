@@ -1,0 +1,1 @@
+trial_id,device_id,photo_id,photo_revision,reply_audio_seconds,width,height,fps,backend_revision,render_seconds,end_to_end_seconds,peak_ram_gb,peak_vram_gb,av_offset_ms,sync_score_1,sync_score_2,natural_score_1,natural_score_2,timeout_choice,duplicate_audio,result

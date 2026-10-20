@@ -1,0 +1,1 @@
+device_id,os_version,cpu,ram_gb,gpu,dedicated_vram_gb,python_version,torch_version,device_backend,driver,commit,llm_model,avatar_backend,notes

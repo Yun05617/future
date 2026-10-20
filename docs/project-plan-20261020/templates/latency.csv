@@ -1,0 +1,1 @@
+trial_id,device_id,commit,mode,cold_or_warm,input_audio_seconds,reply_audio_seconds,manual_wait_seconds,asr_seconds,identity_seconds,emotion_seconds,memory_seconds,llm_seconds,tts_seconds,queue_seconds,render_seconds,wall_seconds,first_play_seconds,success,fallback,error_code
