@@ -19,3 +19,7 @@ opencv-python<4.12
 librosa
 soundfile
 scipy==1.14.1
+# Gradio 3.50 uses the pre-Starlette-1 template API.
+fastapi==0.103.2
+starlette==0.27.0
+pydantic==2.4.2
