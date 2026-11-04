@@ -1,8 +1,16 @@
 diff --git a/infer_audio2vid.py b/infer_audio2vid.py
-index 3f1c210..b62718d 100644
+index 3f1c210..006350c 100644
 --- a/infer_audio2vid.py
 +++ b/infer_audio2vid.py
-@@ -28,7 +28,6 @@ from src.models.whisper.audio2feature import load_audio_model
+@@ -21,6 +21,7 @@ import torch
+ from diffusers import AutoencoderKL, DDIMScheduler
+ from omegaconf import OmegaConf
+ from PIL import Image
++from mac.image_io import load_bgr_image
+ 
+ from src.models.unet_2d_condition import UNet2DConditionModel
+ from src.models.unet_3d_echo import EchoUNet3DConditionModel
+@@ -28,7 +29,6 @@ from src.models.whisper.audio2feature import load_audio_model
  from src.pipelines.pipeline_echo_mimic import Audio2VideoPipeline
  from src.utils.util import save_videos_grid, crop_and_pad
  from src.models.face_locator import FaceLocator
@@ -10,7 +18,7 @@ index 3f1c210..b62718d 100644
  from facenet_pytorch import MTCNN
  
  ffmpeg_path = os.getenv('FFMPEG_PATH')
-@@ -65,7 +64,8 @@ def parse_args():
+@@ -65,7 +65,8 @@ def parse_args():
      parser.add_argument("--steps", type=int, default=30)
      parser.add_argument("--sample_rate", type=int, default=16000)
      parser.add_argument("--fps", type=int, default=24)
@@ -20,7 +28,7 @@ index 3f1c210..b62718d 100644
  
      args = parser.parse_args()
  
-@@ -76,6 +76,8 @@ def select_face(det_bboxes, probs):
+@@ -76,6 +77,8 @@ def select_face(det_bboxes, probs):
      ## box: xyxy
      if det_bboxes is None or probs is None:
          return None
@@ -29,7 +37,16 @@ index 3f1c210..b62718d 100644
      filtered_bboxes = []
      for bbox_i in range(len(det_bboxes)):
          if probs[bbox_i] > 0.8:
-@@ -101,17 +103,22 @@ def main():
+@@ -92,6 +95,8 @@ def main():
+     args = parse_args()
+ 
+     config = OmegaConf.load(args.config)
++    print("Validating input images", flush=True)
++    input_images = {path: load_bgr_image(path) for path in config["test_cases"]}
+     if config.weight_dtype == "fp16":
+         weight_dtype = torch.float16
+     else:
+@@ -101,17 +106,22 @@ def main():
      if device.__contains__("cuda") and not torch.cuda.is_available():
          device = "cpu"
  
@@ -53,7 +70,7 @@ index 3f1c210..b62718d 100644
      ## reference net init
      reference_unet = UNet2DConditionModel.from_pretrained(
          config.pretrained_base_model_path,
-@@ -121,6 +128,7 @@ def main():
+@@ -121,6 +131,7 @@ def main():
          torch.load(config.reference_unet_path, map_location="cpu"),
      )
  
@@ -61,7 +78,7 @@ index 3f1c210..b62718d 100644
      ## denoising net init
      if os.path.exists(config.motion_module_path):
          ### stage1 + stage2
-@@ -147,17 +155,19 @@ def main():
+@@ -147,17 +158,19 @@ def main():
          strict=False
      )
  
@@ -85,7 +102,7 @@ index 3f1c210..b62718d 100644
  
      ############# model_init finished #############
  
-@@ -173,12 +183,12 @@ def main():
+@@ -173,12 +186,12 @@ def main():
          face_locator=face_locator,
          scheduler=scheduler,
      )
@@ -100,7 +117,16 @@ index 3f1c210..b62718d 100644
      save_dir.mkdir(exist_ok=True, parents=True)
  
      for ref_image_path in config["test_cases"].keys():
-@@ -216,12 +226,14 @@ def main():
+@@ -194,7 +207,7 @@ def main():
+             final_fps = args.fps
+ 
+             #### face musk prepare
+-            face_img = cv2.imread(ref_image_path)
++            face_img = input_images[ref_image_path].copy()
+             face_mask = np.zeros((face_img.shape[0], face_img.shape[1])).astype('uint8')
+ 
+             det_bboxes, probs = face_detector.detect(face_img)
+@@ -216,12 +229,14 @@ def main():
                  print(crop_rect)
                  face_img, _ = crop_and_pad(face_img, crop_rect)
                  face_mask, _ = crop_and_pad(face_mask, crop_rect)
@@ -118,7 +144,7 @@ index 3f1c210..b62718d 100644
              video = pipe(
                  ref_image_pil,
                  audio_path,
-@@ -246,11 +258,16 @@ def main():
+@@ -246,11 +261,16 @@ def main():
                  fps=final_fps,
              )
  
