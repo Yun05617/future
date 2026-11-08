@@ -1,0 +1,1790 @@
+[
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/24e350a6c6154b86805228af8f36726b.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/25315d44626e49bc9248f7a31173be59.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/f606403dfc4e409395290b4d71579864.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/4021751c893640b8a3f493ad3a4c3be6.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/aab1e23757fa40a19720df1cb2307789.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/2cf26366c12740f6b28a3ef9c0758e3d.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/f8d15a2d855048369335f38b074cccbf.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/ccc460cdbbcb4614958624aed423e836.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/9872039e6ac74036b3732b993c3b19e8.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/e553d904f079461cb4cc87cfcd1a4ce0.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/647a9dbb11b84e5b94def1695a3ef8fc.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/22b90ebe01764be8bec25706d0f3a190.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/497e372e98d74183ad5f14180eba9aa0.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/e1c60f588cee44a99643fc811da0f9db.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/e7a1d6c34c9e413aa93bd57bf1434e9b.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/c2f2171220d6452f8677d9ee17674ac8.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/c67e584b8d924f548b8f1988d1cecdff.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/0de67b3c76dd497d8cb6f53f60c4ce96.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/3eb3a6a83c6d486188af557c039f297d.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/f146dc31073942dea5a42b48c98ef415.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/b47093319af749f99ea2110a4fa7b4f9.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/82d5326a33d54f70ab2cc08a71711fb6.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/25ae1d2204b4407b914c171c6c1b74be.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/2dea5c6fd42e402ca98114bacfa11585.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/c6d45265c0c846968f2a86929a517e07.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/a2bb9a8b34ef41c9a27584236903dce7.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/e942c389b40d42fcbd052309276c46ca.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/303526a7ffc844268f314a6d10508bd3.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/aa9a20fec51346788716ee15968cddb7.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/587df66ee83e49e4aecbfe307323c7dc.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/98d01ed3e3c440b19120de233c2057c3.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/17186cb19b2f4a9896fa2679654baa34.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/a5c57fe8c17946a599d06b5ebab4d5ca.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/b8a470c1b65c441097cc2098474cb4ea.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/c63e6019ed2d445ab94b71943f7d0242.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/65594abbd9d24d478d47d4541432a3ef.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/0a4e878b887640cfada457ffda8fce27.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/0dfda5832f8f4b829364944deee35379.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/7cf890ad96cb464da8e31767f6068eb9.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/1ace960ed5064bcfa405492f9d003b04.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/4cc36c9b70d54a9281896dca18eaf5ac.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/3cd218d3101943ac8ed82ca55e0b65cf.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/2e6d05f963f244e095cfb7fc89165e9b.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/0f318ca9588441f0bb895e34b3e18d76.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/37979349315e40f1af4c56d165b04bca.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/524678d341a446f7ad5e83b5e91c815a.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/afc7fe8e637f476896c245c92a753417.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/5b2990c415fe498b895616d2326412db.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/41987a6057314cdf8584d18948dff677.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/2b0897e62431410f890d817c1741048f.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/d54ebb8cb263443ca250739c24b3eff3.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/7a605bf7e41742e3b8912194dcc3ee9a.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/13de5855a9b6462697b75dfcaaec590b.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/aead200111564b3d8acabceadd16165e.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/2672bcd3db5040358c6e131bc47ee166.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/853fbacb81b340799b375d8cf1aa6fcd.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/3f72d14fa36c4006a4e29494d46e1262.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/b78f8c9f26784ea88b1149040b432d95.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/5fe69367d21b48f081f24cd8865d4841.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/406ff207265c4d8db6ca7d065fe31f87.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/95d4e65904c34a5d97945139a8bb5fa2.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/c5fe862134634e49a34d635fb56831e9.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/627e7cc6abdd4f4d8a238b72a1f67ae1.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/66ba958368c34630bc6affd9575515fb.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/125e3c65f74a4348bfb1b13205a6eed7.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/c4c5320eefe3481bac8830356c69b1b4.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/46e97750054c4853b627071b658763ba.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/32102c03efb94128a073ee0f2f85bdb7.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/f4a3b53db54f4b7ca198cc55db4b2ea2.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/b21d35da7dd64eb8a6a7f74704fa7b2f.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/ac217bb44d4646fb97caa59cffa85448.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/1b10631277bf4bd2a88170fcd80f5627.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/4d47c1ebc26b4f06914c597258129f93.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/2cc2ad9bf8174f6eba1c7bf52aad9553.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/246ac618e8f543a9a6261f41ff16c8ca.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/ea29c1b4f1e640b09822a13b3ccec83b.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/de4e814f064e458889b5351c740a6add.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/687d13b6e1ba4c9d9d0edf3345099713.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/3e77b46980c64aed85e6fb92fc540f99.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/d300d1df78874f629300a46c78aa2d43.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/7cc91d49c49841259b9ab6061b756036.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/285fcd413c42438f9a4eaac17add9894.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/21142ac6c5d542eebac08b43b110cf2f.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/699e5ab1a83340c7bcdca55a478f865f.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/62935be1bf9b4f81bb4add73518ff937.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/01f2ffbdcd9c47fc9aee468dcd45b8a0.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/882c508790de49d9a1bbd901671c941b.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/d9bb3cb52d5c4f8fbe7674710fb85d28.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/9b55b7339bca45cc8c090faabeb0fb8c.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/b64ea3f6fae74a72b383bca005043cca.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/a864cda71ea0460abd57a80f661c7112.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/b67cf4bf01c34825b4d0a35c9f275bc3.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/ef14822eee00416eb821d839388086b1.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/1d758891bb4f4a08826f7b227ac1997f.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/45b0f13c6cf6436e825fe2584ba5e341.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/b0f439f0cc9940e2b3d23550b41c0267.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/6071f794ad964248840a853b512741c0.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/f9c78c94efef4c19ad14db3915fe1bb7.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/77d316ce9391411ba6347deceb8bcaa7.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/c82efed48a404c90b946705b83352f38.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/e2dc9b9e8bcb48babe1f08b4cb976bbb.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/832f705c83564bf4ae088ffd20efbeb3.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/0c75b3f976984e29bcec78d944576aa4.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/c5e15e5ab12e47e0ba568e508ea36005.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/be258843e6d3427bb81e0edc1ee88f87.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/fc4f638423df45c188e33807bff7578b.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/5c9ce4aa1ade4c83b02c6242e0f8a563.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/6652bf6b140e44dda5c1ad7fa68796ed.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/540a869cf25b48c48f5af9a3155ee277.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/08ae390487164bc980d18c8e0955a7e3.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/8c7cdc2a40e0421792bf008f0f520fed.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/6fce855b403443ef9133942ead83e1db.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/1c9b6c242c5249fe969f771b0ed4e306.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/9fb297b1099b46ebb59e4b93a052aca4.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/949becd7b2e34596a912e39cb4088e1a.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/6e203f8a79134bc286fb7eb1f761e0b1.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/025f093e0f0d4071b5e0e3d79486726f.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/55ba8be6a3c942d3899269cebbaa4146.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/edeee1d73b5a4efdb51beeea374c359f.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/50a9be16acea4edcad3fc9eda4e7ba99.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/548bcccdc9064e04b8ffe69478a40395.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/680603861f904870ba45eeb8f6bbc198.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/8d7cf4a990f744ab96a85549ceacb48d.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/b284d2ad22d74806b496b8df0d742b84.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/c51066f9b6184eed99ca493e3e33ebfc.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/6064a2db87b84d278d09f9b6b0b9a8ae.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/ea05d5bc92bb49769048c1930853ce36.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/74892e6c798345a285b9d6d6da543a6c.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/e2c409d2288c4ed485a932eb70d17eea.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/c2d1a1a9ba13415b98e63e721215687e.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/e0c2ff6e89b9431f85273f3377379f5d.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/7d20bd472c664c258e5d69bc0abf6443.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/8cdeb5347f5848629c00ddc050b46c92.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/9c2e49a85ac9480483160daebf8ec7fa.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/9892987f581146e7b8a92e255e1454da.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/8a8343a9af2542b782802b2c15b417ca.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/bf2198dbb87244808644708dfd0f1bcf.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/d89839f2f6e542caa06e8d0a0c4aae20.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/f6ae80ff8015479ca61b0157faa8f3d3.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/4fb219d33f7e4ce894f8a61133833175.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/f31697df2bb14882902a60ceb44952dd.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/6c0ded95b1ef468f84dd6cb8f9ce9e75.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/335ed78af99549db8ccd78f251219cb0.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/ae745c9e52fc4becae8e389c1474a10f.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/23cf4fe769024cb6a122661a0d9fff83.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/2691a50ef7704ac3b0fb83dbb9896387.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/de10bb6159e8468da0d15d0b8a808f41.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/daae6b28f11148b1949193357114650a.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/1419640d005642668eeba9217691bd25.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/ab89fd75e82645a7a165b26a6e42ddae.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/216d519d0d8442e99e461759495e5e10.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/9e98cb710d3f475fb5311d88b6b1cbf8.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/1605f4e446d64542a48247a47e494e8e.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/a88c1f6ea2844fadaaa9e604a451d8f9.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/7fc28f72b8454749a0a2f346bcc111e7.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\7476bf9fb0994395b2a741bdce7c353d.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\0e9a638def064d9a9db9ae2477717d17.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\fe7ba12f95ee484bbee5d6d5464752e7.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\351b95c873074133899eb9f337ea6374.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\6c27f63f3d7b4bb5a71473be765712f0.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\9bab7c16d8ad40ab90fbf450e5bc2f4c.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\da22bf96e9944e4bae4b7d2ab2d2ca54.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\4b2027d67f8444809bf833c84341a135.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\ac0223000e8e4d48b6590541b62d274b.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\1e465f0a02b0431eb2ae2ae0fb14642c.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\d991e82e74744b70a8311dc7efa34f45.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\43f590a711a146d7955563191b0a9290.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\5bd3f412f876416786db131900fe3682.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\db7b7066e63642298b8326ec1f002297.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\6d2e79a2d7294b2089031e9c5feff673.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\adf1c618b2324fa2bfc4acfb9f0edc60.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\4cceac0d64e348b0b4fd6dc6aad5efc4.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\abb6aad5acd048aab114c274023846f8.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\418dc64df13c41c8a4d2465299ba40ee.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\79d5574750a948058cf4faf833c059fc.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\b3c9abfe3c4a41869d4b39e9f01486a7.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\e2354c6b59d34c52bd99fd9e214511c6.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\013e4cc3514d48b2938c2f1c6d57ff9c.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\1d685eeb92c7423fb14d9fd710060b36.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\8742e4436351426cb6d0c5be71accc51.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\bf8e9f17bc28491c9beeb146d7bd7fab.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\34613a6de4654f33b54872f26a2448f2.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\2a847abf1c464a4d93f2edce7204e550.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\93e62613274047a0b3c221ae9f1af816.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\2793381300c14d9a809c997588389295.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\7ac490a6dde44b6bb93579383e7b1acf.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\4a82783ae6f84265ba2607ed01b10e2e.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\8757f5a1601841219a2702c56a949b70.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\7df51da22b2a49c2abf91377274fe77b.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\cf2292b88f2243d798e3cf82df9666fc.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\82408aa0c6da49bfa30983f01c12a825.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\ef05de8fb9de4566910fb294452360f1.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\eccce0b6a02f4323a24a95f5b982b18a.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\530c062d756c40a0982b66ab068d0bf0.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\dbf09d311bb24725a7b29fe40842cc36.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\516452ef8cb14c07a28e9dcda2126dde.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\2fdebaf4b04b4cb685c6bd8ae95a43c9.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\fb15e430c4644cb2b2a751f2cd9b7db0.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\bca3ab9708784ec6b73a751c66458f51.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\195c502865324bddb847077259c43ab2.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\6ee25123010449149a90e395262f3377.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\5d9ba32afa0046749a902078fbb0b2a9.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\81576601e7d54122941d437f075fb028.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\23493185fbd744e8b2b32b629d2b2154.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\bb71de9ce1a9492e9f092fca6d92414c.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\7fc96777afbf42c29413936ed445c481.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\098f832f91bf41fdbd1b2c6825782d06.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\989148bd64f34450a7912aa5a8efd5be.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\fde2d330c817417fbdf9ff75316d0aa2.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\b771dbd1a67049de9c6ce55d5814211e.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\c883baa99298479289fe0e989f64b887.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\e2d3dec4d55947f2b1bae7751ec89107.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\72e8bdf23f5b4944b73080e65b14611e.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\4c8835675d324a4d946714a37470f847.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\806817cef4384f93ba613ce8e7a46655.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\5f7e2146589f42208c7f1b35c55f2488.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\239a61174c154769a20a9cf28858e444.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\af095024f4da4220a975c5f73616eaaa.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\55382ed15bc549b3b8cbab5c3684dd83.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\0d1135770d5743719c0e996760a114f6.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\4021d0fad77041a4a0b9ad126fd08de3.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\9b360081ca294142bae7af8168664f58.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\89e551e12acd4ba180c71d5c5c6ba4cb.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\5eaeffb16d1d45a9a873611d2c2d4c10.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\f7d70090ac3348fca2cbc1ee84520411.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\439d1ebba5ff47e5b14b58cfe2c1d229.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\3a7636f1576e4e51bca45e21fd7b1e9e.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\df63c62201c04f2d91b706ea44d11f09.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\1c05489a30fa4e0f90de1e2376d78dc4.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\ab24a6e643744d3bbb5640d7310f4aad.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\9f2ecd0cff8f4759965704b9f0dc660b.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\79f5f33dfdbe40638d677df4a59fe287.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\3c81ccd8f0d34e229ae00974c17fe721.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\a6edbd54c1f2477dbbfd02bee99aa69e.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\91092471071240b4afe7173ec8af3553.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\2c5f18c9ba2e444091023349c7e08a8f.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\8db44b47b36b4da3a06deb47147b8d9f.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\0da82934c7464062bc37359d05570d0c.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\77658d79e6b4470b95c53032861f2dcb.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\1af5d0f971664f2b869ebd85f8743587.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\5b7f8bef20a140529b62f9d98b84e5d2.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\3b2ddf181f4b45618eb0da4dc81e8b7b.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\01719f9e9cea48c99080515a737de6da.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\f041dcb7fd4e44e78d3674cdb571efaf.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\bad4bd45df8b4003a1c668ca1ad0f566.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\9f1baac30eca41549fffafa74e2be446.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\bf3087cfebc2493297b92cae15023abb.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\da45498052e64699b6bc29ab18f403b7.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\b370508ab57640d48b3c26f9dc0bfbc9.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\31471e967ea34f3cbdd104a81d2cd55e.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\1a058c6ab91a4c0eb906bf800be23b26.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\454779e36e1547e6bb9ca5f2df3f841c.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\e25be2f23355451fb89065395b6caebb.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\4fe19104fa54400b883dacc440fbea6b.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\bf4cad0259044c0dae873e3c024abae8.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\ae51c39dd8024baba171dffa21d9b10c.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\ba024da435914988aed687485622b12a.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\4214c7c616dc4bd1bdb46331dee61c20.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\f776a47ba4e740d298e5acfe7f49868d.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\ad1a7728f9e04b5783da05e9b1e7fe51.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\da634a1e3b1440f98a9ac172eb40f794.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\3613c945342f4be480f991f6c84fd9a6.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\dfb4482dd3484464b7b10c399fd225f0.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\1eda81980e2e476bb6e2e135dbafe693.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\8a3a8ec234364602b53c179360a7d8a0.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\ab7f88f835834aa8900aa8fdb8a02a2b.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\4eb5f78dd94f49a28d6cd9b8473d2be8.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\564c84a60d194861ab261fe88d7a341f.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\ea58905f3e51468d98ce7a72fdfe5c9c.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\da46ff528056426b938f3bcaf0ef83c8.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\17c64541e1b0482ba6c73b017193c5d1.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\4b3ccddf72414f08aa3f37df190e1d2f.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\932c73915b174a81b3d8d7824b2982ab.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\04e3c563628c4fbaa9921178e10a14b1.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\d140ee9ccc49450eaed0c1fedbcff888.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\a59152cd727746efb7dd09096a81a6fa.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\ddce63c7b34544d492e5d1667e7b9656.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\fa310757645f4e69b6619b88cb99631b.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\19a16620c3184373a1b607c3bb791806.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\76fb66407f9a4ce8a81cff1ed7010e09.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\ac7aaeac487741268de5358bc898e94e.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\7ed6987eed7c491d9caafc3090f4f3a3.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\f3a3927d172643f89bf49eede567c157.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\0b5a501cf538400ba73348a8c8ae35e0.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\405e5ccb1dbd4ec59dc156a6d7340fd6.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\1182b9f1fdef4e4b9465e956fa9fef81.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\363766070bb84ac897b7e93c6a30b6ae.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\69372cd464784280b780590c93acb08b.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\f7e6489ccf994f87b98b0e9ddfb5e5bb.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\0093a0fcf1054806af3feda263308b0c.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\6f44a931d9014b8f90806c0e82d878ad.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\1e1a918477794e2b92212ee45d2573ac.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\231ffa5445264045b75af68d0da41c2d.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\ed914f612ddc4205906ee299262797fd.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\5a006dae0c1043c990c6d63a076ce74e.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\c9b60f918e524711b0100bfaf7429d60.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\e80eef14592c4462b5bcfb7b81849825.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\d16784d2a72442a79a2deb4cfefb53da.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\a3d2901060754c9a9bdcf431ab39c6e2.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\e51caf6a2e21429a8cf92815a4be4048.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\ef71ca428a004fa0a3c0ab7579a567a8.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\5001e2828e2241de8b60f721b72bfdad.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\3cb0d99670e84c24b64c210638f31b73.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\f51e8c0ee976495984b33d4818f305ea.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\933c49d98a2440d3a98c7aa4eb4e75fe.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\98d5c4719b9d42439334502cbefaad02.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\bed50a8f9715481888c515119a3d2a1d.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\c6330c99faf940488671885c3b6f6cc2.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\59268ecebded446b9f05d52f950a45ac.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\67c0f6ff11f047359b8938d314709701.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\db41b9ad6e4f41679742520ed8b03825.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\b361c74037c24ad2b27a5e381e234e5e.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\7c6020142079437380db181ab778d6e3.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\552712f13ae7407da45bf93133e2394f.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\e9ad86a376574c6eb87441981c647451.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\57e2f17430ef404d9d093411da8a26e5.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\66bc988735e54782bd60eaa9f4e3cca8.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\b104f5a1eb5c42fda75f9c8e19914149.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\4eafbae5a9a44222adb54f641c0fa0f8.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\bdd71c76a4934d128c1e4e4787c69f40.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\8f554dd2715c43bb8fed13a8207ade80.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\2d320e504c6243f1a7373231baf9b3c9.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\0bc3f2f95620433183571679bbd7b55d.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\067332bfb2fd4889ba69933a475e2be6.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\c1a3f472462d43bea338fd6e46e3fdf5.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\4e27b47825de4ef0bf3b2b9108095767.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\calm\\bbbe0f36bd5c459a8c5f15fe6cd12296.wav",
+    "label": "calm"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\fbf0f82fc78c480f90f761e7950cf826.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\5529e8a306a2469891b09e5599aee19c.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\760faae6c0fe4dac8b0d79ce4150b00f.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\f57630e8dce5457c8d7b61c027e03462.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\00f7732ae3404885b50aa993ac8e314a.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\381624e0c7c04946af0d24c53bdbf763.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\c45821c11cd7455aaf94a3a848ca7fd9.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\8d8cfbbd9b984f66a4254493c5fa6c65.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\60a53bb8bdcc4e0f881842a2ac7492a4.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\dfa9b6f30cf340c885acdfd63f9f7dac.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\c78af70887fd42deb9cdc2fdd4a47931.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\ea78bc0a76794f53aaa21c0269acc834.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\c5b1db8a166a41a1841dffebecb9578c.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\3aaa2f20f86748ec9836c1eb812b5aaa.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\b5d662f81b7640af9699787cc0ca04cf.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\2ba3c6f1f1e34ec68f2ea4020b4719ec.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\5ce36ebb87c24fee8a414190deac8f8b.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\48313755ad6142e08f927a5e230617b2.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\5522538575994dff882a9199dda4337f.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\693fac31e63447e89d297437a7e42377.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\2f9b2893d22c4ac881499f9240fb5d54.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\396f5e18a00d4bc8b6b459dbc8da7d09.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\130d65f70d6e4dc79a29d49d4c34ea06.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\9e789fbd338c407a879bc7069de8ab38.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\79b793363de34880b1c787149b52adbb.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\141651871efc404ca041e19819dda509.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\a3acd384f36d44aeb5421eebbac8a4e2.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\6e1fda1e724141f6a82078564ea1e5ea.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\28c7458e140448d1beb513be3c6aaf4c.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\179ecd900ec143d4893ed1599046c0dd.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\daf0c93cbb4f489c89bb043b864777fd.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\d01c6d01b14947f5ab34bf5d5d6bdd61.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\0837d6c8fe954ceeb319b7db0add6951.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\f20b9f35f1a74e2fa1166366757a884a.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\3c89a37022c241688e5ed2a01c14c122.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\a3529f59901c40119d725c422d7e9f3e.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\dbe00fd72e694a8882e565d9b0951197.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\6f913344c70e4a5caebd50f838267bf1.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\c5d5675e9010463b9245c28a7ca717b8.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\d8b27ac6eb8d4e4791ee0b3a366a69a8.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\1f838e623afb464bacf8cd07ded1f6fa.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\583332ba69554e2ca471b842502c6f6b.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\f149eb72052d4cceb417892cc6b58540.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\fcaa53d3bd374815b3537267756322ec.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\e364322b60204c5fba0d8b0d7385b461.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\60d948cd0e81427785a2c3416b2ccfcc.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\09376412c2ae43e7bbe26ed8588735c1.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\4d0789a960274ee79c47350f95a75bda.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\50fba1f28132479ea18ba9c158db6a82.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\937e55dbce90468c98205f7f9e429715.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\ded91e014c8146dc88bd280201186dde.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\3950389cb8c74ffd884bcc4285f65283.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\ecbcc09e786044a595c2f383ce4e1214.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\041d6f09e0884ac7be4c3441b61d8963.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\0192853885404dd28e13eabafed4d7b4.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\93d15003578845d4bb3d29f9b434d96e.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\fa480ccaf0c54aa2a3d3589eb6746930.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\1afb0b7724e640618722d88818a74d64.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\40ec32fafa4f4a068cf914ff2c3e2086.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\negative\\2b1360c570484079b6d5c02332e4b707.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\0c72817cac62494c8359f92407fba16d.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\d0d908bf11d74da1ad8bd823a1f472f5.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\c5890765030d48a686935c45d509206e.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\b34b0f70b51d44bb85f907cdf1486c12.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\d472f1b0f15442a2af65dbe1489f640d.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\39eaf57cf2914731b14bb57d08cbca3e.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\d6d9542ce2304a33bb959cf7cef34d8c.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\33154dc5aaec4b6db1f30d8b686c56da.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\4908d64ec2e4440e981abb96a9022ad2.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\73b5e819f5434a94b205b4120540a104.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\d11d534126314bb2ade732804f58d078.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\edb42845753d4f8e84f2c80971fc07f2.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\b54d45c311e5404e8c0a86fe4192396c.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\1afe52bac7204fdcb7ce05e47c3b5eed.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\fc8ef3ff1430403da8fcbc29e0c0b962.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\809e4641e21649d595502521486f7a42.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\40ef8e193fc540b6955b9ee6dd8429e2.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\1b5b5ff078394d238fa77603141887c7.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\17a855a8b74f44f0b7858366473cc625.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\264a33b8143949308ff112acce7ed1c7.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\fde4130fda8248cea208ee0c6b06352c.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\6bc6cf8953e94fc78a1ebe70e3d36678.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\67348dcbca3c420b9ac081fdecf8fd28.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\cff3b56ac111438f8d6704db22ee814c.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\0a67781db94c4b2f8fe4b3433ffd39ea.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\40e56d5af5d54d078fb5e66978f7af76.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\f34766a6b5cf4ce5b5c4962ae0e54f75.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\6f9aae89d42b452fb9a66042ee572f84.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\f8fca624f2a8440ab565e3ec12f84ba5.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\97da6b44e5934a88b06baa12d06b777b.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\07e3660b83fb47c08b6b65c3b7d16f5a.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\74ad35943ede45fda91b5e6e8df73777.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\e263e46959944dfca66426a3abbb44df.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\84a6bdc3bf3b40f28c0f1917b8708083.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\d58ef04532e84886866091b63bc87820.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\82285db223bb4946af85d3bd8a563447.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\729a90c54bab4aea84aa9a85e71fb886.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\6267e2abb73845feac61bbc47de0ed54.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\1bc4a5445e1d49b69e6c97d0afce03cb.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\075fc58ce7f7468db7319e96bb0f30e1.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\373969e1305c447c825b494d2d3d8f78.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\db173c9ad55b4b08b9691b43152f8229.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\ce8a2f9222b549baa95aa16dd25fa80f.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\e00c734a2a0a4ad689c64fe2b92f60fa.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\645e64f1e8f34a3f915412d0805f4fff.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\1aa714043d214ff49aa4c3c8f430e499.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\fa3355b2e1c24783b720c6e68b3cbad4.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\0f9dd2effa7f4e04931954b95ea853bb.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\c9c0f433208b463581ab5d55200af67a.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\1c4db33fb8c04f93be84b57b7e11c8bf.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\3d3d61ae74f543afaf3b25e8278ed8e3.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\c70aceba8aa4407f981d9981a7354a6b.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\b42f6a34657f469380df53dfe3f6b7b3.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\0b29f496c6d343d191dfb5ac8d0f97d7.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\4ca47b8d3f714ba5837a38affe12a162.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\68f6a7507d1e4841a5fcbb6b9c51b887.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\dd1c1931fa9c4ecb9792d44781581467.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\1def9985edd6460483a8a08d14858ded.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\7b34acc1bb7a467fbb8512d8deb65b17.wav",
+    "label": "positive"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\f71718a669df4f39894347f18958f525.wav",
+    "label": "positive"
+  }
+]

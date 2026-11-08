@@ -1,0 +1,74 @@
+[
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/3fff48a6539a47cfabfc3c2306a57544.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/83cb7109f8e04511afd4f8260f58b42e.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/f943b97cd9eb4050b25a0ca99f29cbd0.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/726648b5eeac4c5cbc8c9a248c76e2b2.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/72369120f18643f68996c73888831b75.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/8507c73b9f944a44b1f42a3a5a369909.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/2000d9d849584263a0ab05ed7f393f15.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/033dfa541bb1402ea197259a31bf6e3c.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/af1dbbed331f4b949522277bc7b0cab0.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/a31e5b667c3f468d914f0aeddf0d0dbd.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/a6b97adb21e341c2bfeef389ab2f97e4.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/7b5578ee38ca42dfb9508427a4018b8e.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/756496549363434689f5fbbe3b330164.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/09d407642bf2494483cfdfcf8ec58379.wav",
+    "label": "negative"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/calm/56bdb2062d624971a091dc8b57e00fe1.wav",
+    "label": "calm"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/positive/f2b30a4f7c544478baed8e08bb7806d0.wav",
+    "label": "positive"
+  },
+  {
+    "path": "/Users/xuancheng/Documents/Codex/2026-09-16/new-chat/data/raw/personal_demo/negative/6201a1a09f4e41f8ab3dd5e03b444fe8.wav",
+    "label": "negative"
+  },
+  {
+    "path": "C:\\Users\\Administrator\\Documents\\Codex\\Windows乾淨版\\專案\\data\\raw\\personal_demo\\positive\\bc124570d3d34c2492dd783fa364a500.wav",
+    "label": "positive"
+  }
+]
