@@ -7,6 +7,7 @@ import math
 from pathlib import Path
 import re
 from urllib.parse import quote
+import wave
 
 import gradio as gr
 
@@ -30,39 +31,179 @@ from speech_emotion.traditional_chinese import to_traditional_chinese
 _ALL_SPEAKERS = "全部使用者"
 logger = logging.getLogger(__name__)
 _STORE = ConversationStore(WORKSPACE.root.parent)
-COMPANION_PORTRAIT = Path(__file__).resolve().parents[2] / "assets" / "companion-portrait-v3.png"
+_CHARACTER_ROOT = Path(__file__).resolve().parents[2] / "assets" / "characters2d"
+CHARACTER_ASSETS = {
+    "姜昀廷": {"slug": "jiang-yunting"},
+    "紀律廷": {"slug": "ji-luting"},
+    "趙科翰": {"slug": "zhao-kehan"},
+    "莊媗丞": {"slug": "zhuang-hsuancheng"},
+    "未知使用者": {"slug": "unknown-user"},
+}
+for _character in CHARACTER_ASSETS.values():
+    _slug = _character.pop("slug")
+    _character.update({
+        "base": _CHARACTER_ROOT / f"{_slug}.png",
+        "talk": _CHARACTER_ROOT / f"{_slug}-talk.png",
+        "blink": _CHARACTER_ROOT / f"{_slug}-blink.png",
+    })
 
 COMPANION_HEADER_CSS = """
-.companion-heading { display:grid; grid-template-columns:minmax(0,1fr) 176px; align-items:center; gap:24px; padding:8px 0 14px; }
+.companion-heading { display:grid; grid-template-columns:minmax(0,1fr) 220px; align-items:center; gap:24px; padding:8px 0 14px; }
 .companion-copy { min-width:0; color:var(--warm-text,#302b2a); }
 .companion-copy .eyebrow { display:block; margin-bottom:10px; color:var(--warm-primary,#bf6857); font-size:11px; font-weight:800; letter-spacing:0; }
 .companion-copy h1 { margin:0; font-size:26px; line-height:1.3; font-weight:700; letter-spacing:0; overflow-wrap:anywhere; }
 .companion-copy p { margin:10px 0 0; max-width:400px; color:var(--warm-muted,#7c716d); font-size:15px; line-height:1.7; letter-spacing:0; overflow-wrap:anywhere; }
-.companion-frame { box-sizing:border-box; width:176px; margin:0; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; opacity:0; transform:translateY(6px); pointer-events:none; }
-.companion-frame.is-visible { opacity:1; transform:translateY(0); transition:opacity 2s ease,transform 2s ease; }
-.companion-frame img { display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:contain; border-radius:0; mask-image:linear-gradient(to bottom,#000 0%,#000 78%,transparent 100%); }
-@media (prefers-reduced-motion:reduce) { .companion-frame,.companion-frame.is-visible { transform:none; transition:none; } }
-@media (max-width:480px) { .companion-heading { grid-template-columns:minmax(0,1fr) 112px; gap:14px; } .companion-frame { width:112px; } .companion-copy h1 { font-size:21px; } .companion-copy p { font-size:13px; margin-top:8px; } .companion-copy .eyebrow { font-size:10px; line-height:1.5; } }
+.companion-frame { box-sizing:border-box; width:220px; margin:0; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; pointer-events:none; }
+.character-stage { position:relative; width:100%; aspect-ratio:4/5; overflow:hidden; }
+.character-stage img { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:contain; object-position:center bottom; border-radius:0; mask-image:linear-gradient(to bottom,#000 0%,#000 84%,transparent 100%); transition:opacity 55ms linear,filter 180ms ease; }
+.character-base { opacity:1; }.character-talk,.character-blink { opacity:0; }
+.companion-frame[data-avatar-state="thinking"] .character-stage { animation:companion-breathe 1.8s ease-in-out infinite; }
+.companion-frame[data-avatar-state="speaking"] .character-stage { animation:companion-speak .72s ease-in-out infinite; }
+.companion-frame[data-emotion="正面傾向"] .character-stage img { filter:saturate(1.06) brightness(1.02); }
+.companion-frame[data-emotion="負面傾向"] .character-stage img { filter:saturate(.84) brightness(.96); }
+.companion-meta { display:block; margin-top:-6px; color:var(--warm-text,#302b2a); text-align:center; font-size:13px; font-weight:750; line-height:1.35; }
+@keyframes companion-breathe { 50% { transform:translateY(-2px); } }
+@keyframes companion-speak { 50% { transform:translateY(-1px) scale(1.004); } }
+@media (prefers-reduced-motion:reduce) { .character-stage { animation:none!important; } .character-stage img { transition:none; } }
+@media (max-width:480px) { .companion-heading { grid-template-columns:minmax(0,1fr) 128px; gap:14px; } .companion-frame { width:128px; } .companion-copy h1 { font-size:21px; } .companion-copy p { font-size:13px; margin-top:8px; } .companion-copy .eyebrow { font-size:10px; line-height:1.5; } }
 """
 
-COMPANION_HEADER_JS = """
+COMPANION_HEADER_JS = r"""
 const frame = element.querySelector('#companion-avatar');
+const stage = frame.querySelector('.character-stage');
+const base = frame.querySelector('.character-base');
+const talk = frame.querySelector('.character-talk');
+const blink = frame.querySelector('.character-blink');
+const nameLabel = frame.querySelector('.character-name');
+const config = JSON.parse(element.querySelector('#character-config').dataset.config);
 const controller = new AbortController();
 const options = {signal:controller.signal};
+let currentName = '未知使用者';
+let audioFrame = 0;
+let audioContext = null;
+let analyser = null;
+const audioSources = new WeakMap();
+let speechToken = 0;
+
+function rootScope() {
+    const host = document.querySelector('gradio-app');
+    return host && host.shadowRoot ? host.shadowRoot : document;
+}
+function deepQueryAll(root, selector) {
+    const found = [...root.querySelectorAll(selector)];
+    root.querySelectorAll('*').forEach(node => {
+        if (node.shadowRoot) found.push(...deepQueryAll(node.shadowRoot, selector));
+    });
+    return found;
+}
+function setCharacter(requestedName) {
+    const nextName = config[requestedName] ? requestedName : '未知使用者';
+    if (nextName === currentName && base.src) return;
+    currentName = nextName;
+    const character = config[nextName];
+    base.src = character.base; talk.src = character.talk; blink.src = character.blink;
+    nameLabel.textContent = nextName;
+    frame.dataset.character = nextName;
+}
+function setState(state) {
+    frame.dataset.avatarState = state;
+    if (state !== 'speaking') talk.style.opacity = '0';
+}
+function setEmotion(value) {
+    frame.dataset.emotion = value || '未分析';
+}
+function setAudioLevel(level) {
+    const safeLevel = Math.max(0, Math.min(1, Number(level) || 0));
+    talk.style.opacity = frame.dataset.avatarState === 'speaking' && safeLevel > .08
+        ? String(Math.min(1, .2 + safeLevel * 1.15)) : '0';
+}
+function scheduleBlink() {
+    const delay = 2600 + Math.random() * 2600;
+    window.setTimeout(() => {
+        if (!element.isConnected) return;
+        if (frame.dataset.avatarState !== 'speaking') {
+            blink.style.opacity = '1';
+            window.setTimeout(() => { blink.style.opacity = '0'; }, 145);
+        }
+        scheduleBlink();
+    }, delay);
+}
+function stopAudioAnimation() {
+    if (audioFrame) cancelAnimationFrame(audioFrame);
+    audioFrame = 0; setAudioLevel(0);
+}
+function animateAudioLevel() {
+    if (frame.dataset.avatarState !== 'speaking') { stopAudioAnimation(); return; }
+    let level = .45 + Math.sin(performance.now() / 95) * .2;
+    if (analyser) {
+        const data = new Uint8Array(analyser.fftSize);
+        analyser.getByteTimeDomainData(data);
+        let sum = 0;
+        for (const sample of data) { const normalized = (sample - 128) / 128; sum += normalized * normalized; }
+        level = Math.min(1, Math.sqrt(sum / data.length) * 8);
+    }
+    setAudioLevel(level);
+    audioFrame = requestAnimationFrame(animateAudioLevel);
+}
+function bindAudio(audio) {
+    if (!audio || audio.dataset.companionBound) return;
+    audio.dataset.companionBound = 'true';
+    const startSpeaking = () => {
+        setState('speaking');
+        try {
+            audioContext ||= new AudioContext();
+            if (!audioSources.has(audio)) {
+                const source = audioContext.createMediaElementSource(audio);
+                const audioAnalyser = audioContext.createAnalyser();
+                audioAnalyser.fftSize = 256;
+                source.connect(audioAnalyser); audioAnalyser.connect(audioContext.destination);
+                audioSources.set(audio, {source, analyser:audioAnalyser});
+            }
+            analyser = audioSources.get(audio).analyser;
+            audioContext.resume();
+        } catch (_) { analyser = null; }
+        stopAudioAnimation(); animateAudioLevel();
+    };
+    audio.addEventListener('play', startSpeaking, options);
+    const finish = () => requestAnimationFrame(() => {
+        const anyPlaying = deepQueryAll(rootScope(), '#reply-audio audio')
+            .some(candidate => !candidate.paused && !candidate.ended);
+        if (!anyPlaying) { stopAudioAnimation(); setState('ready'); }
+    });
+    audio.addEventListener('pause', finish, options); audio.addEventListener('ended', finish, options);
+    if (!audio.paused && !audio.ended) startSpeaking();
+}
+function syncModel() {
+    const scope = rootScope();
+    const status = scope.querySelector('#chat-status');
+    const text = status ? status.innerText : '';
+    const userMatch = text.match(/目前使用者[：:]\s*([^\n]+)/);
+    if (userMatch) setCharacter(userMatch[1].trim());
+    const emotionMatch = text.match(/模型判斷[）)]?[：:]\s*([^\n]+)/);
+    if (emotionMatch) setEmotion(emotionMatch[1].trim());
+    deepQueryAll(scope, '#reply-audio audio').forEach(bindAudio);
+}
+setCharacter(currentName); setState('ready'); scheduleBlink(); syncModel();
+const scanTimer = window.setInterval(syncModel, 200);
 window.addEventListener('companion-turn-start', event => {
-    if (!event.detail.voice || frame.classList.contains('is-visible')) return;
-    frame.dataset.avatarState = 'thinking';
-    frame.setAttribute('aria-hidden', 'false');
-    frame.classList.add('is-visible');
-    frame.scrollIntoView({behavior:'smooth', block:'center'});
+    setState(event.detail.voice ? 'listening' : 'thinking');
 }, options);
 window.addEventListener('companion-turn-finish', event => {
-    if (frame.classList.contains('is-visible')) frame.dataset.avatarState = 'ready';
+    syncModel(); if (frame.dataset.avatarState !== 'speaking') setState('ready');
+}, options);
+window.addEventListener('companion-speech-ready', event => {
+    const duration = Math.max(.4, Number(event.detail.duration) || 1);
+    const token = ++speechToken;
+    setState('speaking'); stopAudioAnimation(); animateAudioLevel();
+    window.setTimeout(() => {
+        if (token === speechToken) { stopAudioAnimation(); setState('ready'); }
+    }, duration * 1000 + 180);
 }, options);
 const observer = new MutationObserver(() => {
-    if (!element.isConnected) { controller.abort(); observer.disconnect(); }
+    if (!element.isConnected) { controller.abort(); observer.disconnect(); clearInterval(scanTimer); stopAudioAnimation(); return; }
+    syncModel();
 });
-observer.observe(document.body, {childList:true, subtree:true});
+observer.observe(rootScope(), {childList:true, subtree:true, characterData:true});
 """
 
 COMPANION_START_JS = """(message, microphone, upload, history, conversationId, query, speakerFilter) => {
@@ -73,21 +214,38 @@ COMPANION_FINISH_JS = """(status) => {
     window.dispatchEvent(new CustomEvent('companion-turn-finish', {detail:{failed:Boolean(status)}}));
     return [];
 }"""
+COMPANION_SPEECH_JS = """(duration) => {
+    window.dispatchEvent(new CustomEvent('companion-speech-ready', {detail:{duration:Number(duration) || 1}}));
+    return [];
+}"""
 
 
 def _companion_header() -> str:
-    """Serve only the generated portrait, never the recording workspace."""
-    if not COMPANION_PORTRAIT.is_file():
-        raise FileNotFoundError(f"Missing companion portrait: {COMPANION_PORTRAIT}")
-    gr.set_static_paths(paths=[COMPANION_PORTRAIT])
-    image_url = "/gradio_api/file=" + quote(COMPANION_PORTRAIT.as_posix(), safe="/:")
+    """Build the layered five-character companion stage."""
+    asset_paths = [character[state] for character in CHARACTER_ASSETS.values() for state in ("base", "talk", "blink")]
+    missing = [path for path in asset_paths if not path.is_file()]
+    if missing:
+        raise FileNotFoundError(f"Missing 2D character assets: {', '.join(map(str, missing))}")
+    gr.set_static_paths(paths=asset_paths)
+    config = {
+        name: {
+            **{state: "/gradio_api/file=" + quote(character[state].as_posix(), safe="/:") for state in ("base", "talk", "blink")},
+        }
+        for name, character in CHARACTER_ASSETS.items()
+    }
+    default = config["未知使用者"]
+    encoded_config = escape(json.dumps(config, ensure_ascii=False), quote=True)
     return (
         '<section class="companion-heading" aria-label="對話夥伴">'
         '<div class="companion-copy"><span class="eyebrow">VOICE · IDENTITY · EMOTION</span>'
         '<h1>開始一段對話</h1><p>我在這裡，陪你把想說的話慢慢說完。</p></div>'
-        '<figure class="companion-frame" id="companion-avatar" data-avatar-state="hidden" aria-hidden="true">'
-        f'<img src="{escape(image_url, quote=True)}" alt="原創韓系女性對話夥伴肖像" '
-        'width="1122" height="1402" loading="eager" decoding="async"></figure></section>'
+        f'<span id="character-config" hidden data-config="{encoded_config}"></span>'
+        '<figure class="companion-frame" id="companion-avatar" data-avatar-state="ready" data-emotion="未分析" aria-hidden="false">'
+        '<div class="character-stage">'
+        f'<img class="character-base" src="{escape(default["base"], quote=True)}" alt="目前對話使用者的 2D 動態角色" loading="eager" decoding="async">'
+        f'<img class="character-talk" src="{escape(default["talk"], quote=True)}" alt="" aria-hidden="true" decoding="async">'
+        f'<img class="character-blink" src="{escape(default["blink"], quote=True)}" alt="" aria-hidden="true" decoding="async">'
+        '</div><figcaption class="companion-meta character-name">未知使用者</figcaption></figure></section>'
     )
 
 SHOWCASE_CSS = """
@@ -226,12 +384,24 @@ def _delete_chat(conversation_id: str | None, query: str, speaker_filter: str):
 
 
 def _play_reply(history: list[dict[str, str]], voice_mode: str):
-    text = next((item["content"] for item in reversed(history or []) if item.get("role") == "assistant"), "")
+    content = next((item.get("content", "") for item in reversed(history or []) if item.get("role") == "assistant"), "")
+    if isinstance(content, list):
+        text = "".join(
+            part if isinstance(part, str) else str(part.get("text", ""))
+            for part in content if isinstance(part, (str, dict))
+        )
+    else:
+        text = content if isinstance(content, str) else str(content or "")
     try:
         audio_path = synthesize_reply(text, voice_mode, WORKSPACE.root / "06_聊天整合" / "回覆語音")
     except ReplySpeechError as error:
-        return None, str(error)
-    return str(audio_path), ""
+        return None, str(error), 0.0
+    try:
+        with wave.open(str(audio_path), "rb") as audio:
+            duration = audio.getnframes() / audio.getframerate()
+    except (OSError, wave.Error, ZeroDivisionError):
+        duration = max(1.0, len(text) * 0.16)
+    return str(audio_path), "", duration
 
 
 def _run_turn(message, microphone, upload, history, conversation_id, query, speaker_filter):
@@ -306,12 +476,13 @@ def build_showcase_demo() -> gr.Blocks:
                 status = gr.Markdown("", elem_classes=["message-panel"])
                 with gr.Row(elem_classes=["utility-row"]):
                     voice_mode = gr.Radio(choices=[("溫柔女聲", "gentle"), ("中性聲線", "neutral")], value="gentle", label="回覆語音")
-                    play = gr.Button("播放回覆")
+                    play = gr.Button("重新播放語音")
                     clear = gr.Button("清除目前內容")
                 reply_audio = gr.Audio(
                     label="回覆語音", type="filepath", format="wav",
                     interactive=False, autoplay=True, elem_id="reply-audio",
                 )
+                speech_duration = gr.State(0.0)
                 with gr.Accordion("查看這次語音分析與更正", open=False):
                     transcript = gr.Textbox(label="本次繁體中文轉寫", interactive=False, lines=3)
                     speaker = gr.Dropdown(choices=[*KNOWN_SPEAKERS, UNKNOWN_SPEAKER], value=UNKNOWN_SPEAKER, label="正確說話者")
@@ -326,14 +497,20 @@ def build_showcase_demo() -> gr.Blocks:
         new_chat.click(_new_chat, inputs=[history_search, speaker_filter], outputs=refresh_outputs).then(lambda: [], outputs=history_state).then(lambda: (None, None), outputs=[microphone, upload])
         history_picker.change(_load_chat, inputs=[history_picker, history_search, speaker_filter], outputs=refresh_outputs).then(lambda h: h, inputs=history_view, outputs=history_state)
         delete_chat.click(_delete_chat, inputs=[conversation_state, history_search, speaker_filter], outputs=refresh_outputs).then(lambda: [], outputs=history_state).then(lambda: (None, None), outputs=[microphone, upload])
-        send.click(
+        send_event = send.click(
             _run_turn, inputs=[message, microphone, upload, history_state, conversation_state, history_search, speaker_filter],
             outputs=[*refresh_outputs, microphone, upload], js=COMPANION_START_JS,
-        ).then(lambda h: h, inputs=history_view, outputs=history_state).then(
+        )
+        history_event = send_event.then(lambda h: h, inputs=history_view, outputs=history_state)
+        history_event.then(
+            _play_reply, inputs=[history_state, voice_mode], outputs=[reply_audio, status, speech_duration],
+        ).then(fn=None, inputs=speech_duration, outputs=[], js=COMPANION_SPEECH_JS, queue=False).then(
             fn=None, inputs=status, outputs=[], js=COMPANION_FINISH_JS, queue=False,
         )
         clear.click(lambda: ([], "", "目前使用者：未知使用者", "聲音情緒（模型判斷）：未分析", "信心度：—", "尚未分析語音。", "", None, UNKNOWN_SPEAKER, gr.update(value=None)), outputs=refresh_outputs).then(lambda: [], outputs=history_state).then(lambda: (None, None), outputs=[microphone, upload])
-        play.click(_play_reply, inputs=[history_state, voice_mode], outputs=[reply_audio, status])
+        play.click(
+            _play_reply, inputs=[history_state, voice_mode], outputs=[reply_audio, status, speech_duration],
+        ).then(fn=None, inputs=speech_duration, outputs=[], js=COMPANION_SPEECH_JS, queue=False)
         for action in (new_chat, delete_chat, clear, send):
             action.click(lambda: None, outputs=reply_audio, queue=False)
         history_picker.change(lambda: None, outputs=reply_audio, queue=False)

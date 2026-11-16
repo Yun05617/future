@@ -10,7 +10,7 @@ def test_showcase_page_includes_history_sidebar_and_local_voice_controls():
     assert "搜尋歷史對話" in rendered
     assert "篩選使用者" in rendered
     assert "歷史對話" in rendered
-    assert "播放回覆" in rendered
+    assert "重新播放語音" in rendered
     assert "溫柔女聲" in rendered
     assert "中性聲線" in rendered
     assert "flex-wrap:nowrap" in SHOWCASE_CSS
@@ -24,53 +24,83 @@ def test_showcase_page_includes_history_sidebar_and_local_voice_controls():
     assert "#input-dock #audio-input button::after" not in SHOWCASE_CSS
     playback = next(item for item in config["dependencies"] if item["api_name"] == "_play_reply")
     components = {item["id"]: item for item in config["components"]}
-    assert [components[item]["type"] for item in playback["outputs"]] == ["audio", "markdown"]
+    assert [components[item]["type"] for item in playback["outputs"]] == ["audio", "markdown", "state"]
     assert playback["js"] is None
     assert components[playback["outputs"][0]]["props"]["autoplay"] is True
 
 
-def test_companion_portrait_has_transparent_asset_and_responsive_layout():
+def test_companion_portrait_has_five_animated_character_sets_and_responsive_layout():
     from html.parser import HTMLParser
-    from urllib.parse import unquote
     from speech_emotion.showcase_ui import (
-        COMPANION_HEADER_CSS, COMPANION_PORTRAIT, _companion_header, build_showcase_demo,
+        CHARACTER_ASSETS, COMPANION_HEADER_CSS, _companion_header, build_showcase_demo,
     )
 
     class ImageParser(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.images = []
+
         def handle_starttag(self, tag, attrs):
             if tag == "img":
-                self.image = dict(attrs)
+                self.images.append(dict(attrs))
 
     parser = ImageParser()
     parser.feed(_companion_header())
-    assert COMPANION_PORTRAIT.is_file()
     from PIL import Image
 
-    with Image.open(COMPANION_PORTRAIT) as portrait:
-        assert portrait.mode == "RGBA"
-        assert portrait.getchannel("A").getextrema() == (0, 255)
-        assert portrait.getpixel((0, 0))[3] == 0
-    assert unquote(parser.image["src"]) == "/gradio_api/file=" + COMPANION_PORTRAIT.as_posix()
-    assert parser.image["alt"] == "原創韓系女性對話夥伴肖像"
+    assert set(CHARACTER_ASSETS) == {"姜昀廷", "紀律廷", "趙科翰", "莊媗丞", "未知使用者"}
+    for character in CHARACTER_ASSETS.values():
+        assert set(character) >= {"base", "talk", "blink"}
+        sizes = set()
+        for state in ("base", "talk", "blink"):
+            path = character[state]
+            assert path.is_file()
+            with Image.open(path) as portrait:
+                assert portrait.mode == "RGBA"
+                sizes.add(portrait.size)
+        assert len(sizes) == 1
+    assert "character-base" in _companion_header()
+    assert "character-talk" in _companion_header()
+    assert "character-blink" in _companion_header()
+    assert parser.images[0]["alt"] == "目前對話使用者的 2D 動態角色"
+    assert parser.images[1]["alt"] == parser.images[2]["alt"] == ""
+    assert parser.images[1]["aria-hidden"] == parser.images[2]["aria-hidden"] == "true"
     assert "aspect-ratio:4/5" in COMPANION_HEADER_CSS
-    assert "width:176px" in COMPANION_HEADER_CSS
-    assert "width:112px" in COMPANION_HEADER_CSS
+    assert "width:220px" in COMPANION_HEADER_CSS
+    assert "width:128px" in COMPANION_HEADER_CSS
     assert "border:0; border-radius:0; background:transparent; box-shadow:none" in COMPANION_HEADER_CSS
     assert "mask-image:linear-gradient" in COMPANION_HEADER_CSS
     config = build_showcase_demo().get_config_file()
     header = next(item for item in config["components"] if item["props"].get("elem_id") == "companion-header")
     assert header["props"]["css_template"] == COMPANION_HEADER_CSS
-    assert 'data-avatar-state="hidden"' in header["props"]["value"]
-    assert 'aria-hidden="true"' in header["props"]["value"]
-    assert "opacity:0" in COMPANION_HEADER_CSS
-    assert "transition:opacity 2s ease" in COMPANION_HEADER_CSS
+    assert 'data-avatar-state="ready"' in header["props"]["value"]
+    assert 'aria-hidden="false"' in header["props"]["value"]
+    assert "韓系復古紳士風" not in header["props"]["value"]
+    assert "溫暖大哥哥風" not in header["props"]["value"]
+    assert "準備回覆" not in header["props"]["value"]
+    assert "character-talk" in header["props"]["value"]
+    assert "character-blink" in header["props"]["value"]
     assert "companion-turn-start" in header["props"]["js_on_load"]
+    assert "companion-speech-ready" in header["props"]["js_on_load"]
+    assert "目前使用者" in header["props"]["js_on_load"]
+    assert "reply-audio" in header["props"]["js_on_load"]
+    assert "deepQueryAll(scope, '#reply-audio audio')" in header["props"]["js_on_load"]
+    assert "setInterval(syncModel, 200)" in header["props"]["js_on_load"]
+    assert "!audio.paused && !audio.ended" in header["props"]["js_on_load"]
+    assert "const anyPlaying" in header["props"]["js_on_load"]
+    assert "setCharacter" in header["props"]["js_on_load"]
+    assert "setAudioLevel" in header["props"]["js_on_load"]
     turn = next(item for item in config["dependencies"] if item["api_name"] == "_run_turn")
     assert "Boolean(microphone || upload)" in turn["js"]
     assert any("companion-turn-finish" in (item["js"] or "") for item in config["dependencies"])
-    assert "frame.classList.contains('is-visible')) return" in header["props"]["js_on_load"]
+    assert "frame.classList.contains('is-visible')) return" not in header["props"]["js_on_load"]
     assert "classList.remove" not in header["props"]["js_on_load"]
     assert "companion-reset" not in str(config)
+    automatic_speech = [
+        item for item in config["dependencies"]
+        if item["api_name"] == "_play_reply" and item.get("trigger_after") is not None
+    ]
+    assert automatic_speech, "回覆完成後應自動產生並播放語音"
 
 
 def test_loading_old_chat_displays_traditional_without_rewriting_archive(monkeypatch, tmp_path):

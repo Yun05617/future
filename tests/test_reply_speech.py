@@ -1,6 +1,7 @@
 import json
 import os
 import subprocess
+import sys
 import wave
 
 import pytest
@@ -51,4 +52,53 @@ def test_play_button_returns_inline_message_when_no_reply_exists(monkeypatch):
         raise reply_speech.ReplySpeechError("尚無可播放的回覆")
 
     monkeypatch.setattr("speech_emotion.showcase_ui.synthesize_reply", synthesize)
-    assert _play_reply([], "gentle") == (None, "尚無可播放的回覆")
+    assert _play_reply([], "gentle") == (None, "尚無可播放的回覆", 0.0)
+
+
+def test_reply_playback_accepts_gradio_list_content(monkeypatch, tmp_path):
+    from speech_emotion import showcase_ui
+
+    captured = {}
+
+    def synthesize(text, mode, directory):
+        captured.update(text=text, mode=mode)
+        return tmp_path / "reply.wav"
+
+    monkeypatch.setattr(showcase_ui, "synthesize_reply", synthesize)
+    audio, error, duration = showcase_ui._play_reply(
+        [{"role": "assistant", "content": ["你", "好"]}], "gentle",
+    )
+
+    assert captured == {"text": "你好", "mode": "gentle"}
+    assert audio.endswith("reply.wav")
+    assert error == ""
+    assert duration >= 1.0
+
+
+@pytest.mark.skipif(sys.platform != "darwin", reason="macOS speech adapter")
+def test_macos_reply_uses_local_say_and_converts_to_wav(monkeypatch, tmp_path):
+    calls = []
+    text = '你好，這是自動語音。$(不應執行)'
+
+    def fake_run(command, **kwargs):
+        calls.append((command, kwargs))
+        assert text not in " ".join(command)
+        if command[0] == "/usr/bin/say":
+            assert kwargs["input"] == text
+            output = command[command.index("-o") + 1]
+            open(output, "wb").write(b"FORM" + b"\x00" * 64)
+        else:
+            output = command[-1]
+            with wave.open(output, "wb") as audio:
+                audio.setnchannels(1)
+                audio.setsampwidth(2)
+                audio.setframerate(24000)
+                audio.writeframes(b"\x01\x00" * 240)
+
+    monkeypatch.setattr(reply_speech.subprocess, "run", fake_run)
+    monkeypatch.setattr(reply_speech.shutil, "which", lambda name: f"/usr/bin/{name}")
+    output = reply_speech.synthesize_reply(text, "gentle", tmp_path)
+
+    assert output.read_bytes()[:4] == b"RIFF"
+    assert calls[0][0][0] == "/usr/bin/say"
+    assert len(calls) == 2
