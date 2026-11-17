@@ -1,0 +1,185 @@
+diff --git a/infer_audio2vid.py b/infer_audio2vid.py
+index 3f1c210..006350c 100644
+--- a/infer_audio2vid.py
++++ b/infer_audio2vid.py
+@@ -21,6 +21,7 @@ import torch
+ from diffusers import AutoencoderKL, DDIMScheduler
+ from omegaconf import OmegaConf
+ from PIL import Image
++from mac.image_io import load_bgr_image
+ 
+ from src.models.unet_2d_condition import UNet2DConditionModel
+ from src.models.unet_3d_echo import EchoUNet3DConditionModel
+@@ -28,7 +29,6 @@ from src.models.whisper.audio2feature import load_audio_model
+ from src.pipelines.pipeline_echo_mimic import Audio2VideoPipeline
+ from src.utils.util import save_videos_grid, crop_and_pad
+ from src.models.face_locator import FaceLocator
+-from moviepy.editor import VideoFileClip, AudioFileClip
+ from facenet_pytorch import MTCNN
+ 
+ ffmpeg_path = os.getenv('FFMPEG_PATH')
+@@ -65,7 +65,8 @@ def parse_args():
+     parser.add_argument("--steps", type=int, default=30)
+     parser.add_argument("--sample_rate", type=int, default=16000)
+     parser.add_argument("--fps", type=int, default=24)
+-    parser.add_argument("--device", type=str, default="cuda")
++    parser.add_argument("--device", type=str, default="mps")
++    parser.add_argument("--output-dir", type=str, default=None)
+ 
+     args = parser.parse_args()
+ 
+@@ -76,6 +77,8 @@ def select_face(det_bboxes, probs):
+     ## box: xyxy
+     if det_bboxes is None or probs is None:
+         return None
++    if det_bboxes is None:
++        return None
+     filtered_bboxes = []
+     for bbox_i in range(len(det_bboxes)):
+         if probs[bbox_i] > 0.8:
+@@ -92,6 +95,8 @@ def main():
+     args = parse_args()
+ 
+     config = OmegaConf.load(args.config)
++    print("Validating input images", flush=True)
++    input_images = {path: load_bgr_image(path) for path in config["test_cases"]}
+     if config.weight_dtype == "fp16":
+         weight_dtype = torch.float16
+     else:
+@@ -101,17 +106,22 @@ def main():
+     if device.__contains__("cuda") and not torch.cuda.is_available():
+         device = "cpu"
+ 
++    if device == "mps" and not torch.backends.mps.is_available():
++        raise RuntimeError("Apple MPS is unavailable")
++
+     inference_config_path = config.inference_config
+     infer_config = OmegaConf.load(inference_config_path)
+ 
+ 
+     ############# model_init started #############
+ 
++    print("Loading VAE", flush=True)
+     ## vae init
+     vae = AutoencoderKL.from_pretrained(
+         config.pretrained_vae_path,
+-    ).to("cuda", dtype=weight_dtype)
++    ).to(device, dtype=weight_dtype)
+ 
++    print("Loading reference model", flush=True)
+     ## reference net init
+     reference_unet = UNet2DConditionModel.from_pretrained(
+         config.pretrained_base_model_path,
+@@ -121,6 +131,7 @@ def main():
+         torch.load(config.reference_unet_path, map_location="cpu"),
+     )
+ 
++    print("Loading video model", flush=True)
+     ## denoising net init
+     if os.path.exists(config.motion_module_path):
+         ### stage1 + stage2
+@@ -147,17 +158,19 @@ def main():
+         strict=False
+     )
+ 
++    print("Loading face locator", flush=True)
+     ## face locator init
+     face_locator = FaceLocator(320, conditioning_channels=1, block_out_channels=(16, 32, 96, 256)).to(
+-        dtype=weight_dtype, device="cuda"
++        dtype=weight_dtype, device=device
+     )
+-    face_locator.load_state_dict(torch.load(config.face_locator_path))
++    face_locator.load_state_dict(torch.load(config.face_locator_path, map_location="cpu"))
+ 
++    print("Loading audio processor", flush=True)
+     ### load audio processor params
+-    audio_processor = load_audio_model(model_path=config.audio_model_path, device=device)
++    audio_processor = load_audio_model(model_path=config.audio_model_path, device="cpu" if device == "mps" else device)
+ 
+     ### load face detector params
+-    face_detector = MTCNN(image_size=320, margin=0, min_face_size=20, thresholds=[0.6, 0.7, 0.7], factor=0.709, post_process=True, device=device)
++    face_detector = MTCNN(image_size=320, margin=0, min_face_size=20, thresholds=[0.6, 0.7, 0.7], factor=0.709, post_process=True, device="cpu" if device == "mps" else device)
+ 
+     ############# model_init finished #############
+ 
+@@ -173,12 +186,12 @@ def main():
+         face_locator=face_locator,
+         scheduler=scheduler,
+     )
+-    pipe = pipe.to("cuda", dtype=weight_dtype)
++    pipe = pipe.to(device, dtype=weight_dtype)
+ 
+     date_str = datetime.now().strftime("%Y%m%d")
+     time_str = datetime.now().strftime("%H%M")
+     save_dir_name = f"{time_str}--seed_{args.seed}-{args.W}x{args.H}"
+-    save_dir = Path(f"output/{date_str}/{save_dir_name}")
++    save_dir = Path(args.output_dir) if args.output_dir else Path(f"output/{date_str}/{save_dir_name}")
+     save_dir.mkdir(exist_ok=True, parents=True)
+ 
+     for ref_image_path in config["test_cases"].keys():
+@@ -194,7 +207,7 @@ def main():
+             final_fps = args.fps
+ 
+             #### face musk prepare
+-            face_img = cv2.imread(ref_image_path)
++            face_img = input_images[ref_image_path].copy()
+             face_mask = np.zeros((face_img.shape[0], face_img.shape[1])).astype('uint8')
+ 
+             det_bboxes, probs = face_detector.detect(face_img)
+@@ -216,12 +229,14 @@ def main():
+                 print(crop_rect)
+                 face_img, _ = crop_and_pad(face_img, crop_rect)
+                 face_mask, _ = crop_and_pad(face_mask, crop_rect)
+-                face_img = cv2.resize(face_img, (args.W, args.H))
+-                face_mask = cv2.resize(face_mask, (args.W, args.H))
++            # Also normalize dimensions when the face detector returns no box.
++            face_img = cv2.resize(face_img, (args.W, args.H))
++            face_mask = cv2.resize(face_mask, (args.W, args.H))
+ 
+             ref_image_pil = Image.fromarray(face_img[:, :, [2, 1, 0]])
+-            face_mask_tensor = torch.Tensor(face_mask).to(dtype=weight_dtype, device="cuda").unsqueeze(0).unsqueeze(0).unsqueeze(0) / 255.0
++            face_mask_tensor = torch.Tensor(face_mask).to(dtype=weight_dtype, device=device).unsqueeze(0).unsqueeze(0).unsqueeze(0) / 255.0
+ 
++            print("Generating video", flush=True)
+             video = pipe(
+                 ref_image_pil,
+                 audio_path,
+@@ -246,11 +261,16 @@ def main():
+                 fps=final_fps,
+             )
+ 
+-            video_clip = VideoFileClip(f"{save_dir}/{ref_name}_{audio_name}_{args.H}x{args.W}_{int(args.cfg)}_{time_str}.mp4")
+-            audio_clip = AudioFileClip(audio_path)
+-            video_clip = video_clip.set_audio(audio_clip)
+-            video_clip.write_videofile(f"{save_dir}/{ref_name}_{audio_name}_{args.H}x{args.W}_{int(args.cfg)}_{time_str}_withaudio.mp4", codec="libx264", audio_codec="aac")
+-            print(f"{save_dir}/{ref_name}_{audio_name}_{args.H}x{args.W}_{int(args.cfg)}_{time_str}_withaudio.mp4")
++            video_path = f"{save_dir}/{ref_name}_{audio_name}_{args.H}x{args.W}_{int(args.cfg)}_{time_str}.mp4"
++            output_path = video_path[:-4] + "_withaudio.mp4"
++            subprocess.run([
++                "ffmpeg", "-y", "-i", video_path, "-i", str(audio_path),
++                "-map", "0:v:0", "-map", "1:a:0", "-c:v", "copy",
++                "-c:a", "aac", "-t", str(video.shape[2] / final_fps),
++                "-shortest", "-movflags", "+faststart", output_path,
++            ], check=True)
++            print(output_path)
++
+ 
+ 
+ if __name__ == "__main__":
+diff --git a/src/models/mutual_self_attention.py b/src/models/mutual_self_attention.py
+index b5d4a7f..4bfc4e7 100644
+--- a/src/models/mutual_self_attention.py
++++ b/src/models/mutual_self_attention.py
+@@ -61,9 +61,11 @@ class ReferenceAttentionControl:
+         dtype=torch.float16,
+         batch_size=1,
+         num_images_per_prompt=1,
+-        device=torch.device("cuda"),
++        device=None,
+         fusion_blocks="midup",
+     ):
++        if device is None:
++            device = next(self.unet.parameters()).device
+         MODE = mode
+         do_classifier_free_guidance = do_classifier_free_guidance
+         attention_auto_machine_weight = attention_auto_machine_weight
