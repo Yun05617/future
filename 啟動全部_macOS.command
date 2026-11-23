@@ -96,9 +96,7 @@ if ! curl --silent --fail --max-time 2 http://127.0.0.1:11434/api/tags >/dev/nul
 fi
 
 "$PYTHON" "$ROOT/scripts/prepare_handoff.py"
-echo '即將開啟三個頁面：'
-echo '前台：http://127.0.0.1:7862/'
-echo '訓練後台：http://127.0.0.1:7860/'
-echo '聲音擴增：http://127.0.0.1:7876/'
+echo '即將開啟完整整合頁面：http://127.0.0.1:7862/'
+echo '訓練後台與聲音擴增服務會在背景一併啟動。'
 echo '請保持此視窗開啟；按 Control+C 停止全部介面。'
 "$PYTHON" "$ROOT/scripts/run_competition_demo.py"

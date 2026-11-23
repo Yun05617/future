@@ -6,7 +6,13 @@
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
 $python = Join-Path $root '.venv\Scripts\python.exe'
-if (!(Test-Path -LiteralPath $python)) { throw 'Run setup_windows.bat first.' }
+if (!(Test-Path -LiteralPath $python)) {
+    Write-Host 'First launch: preparing the Windows Python environment...'
+    & (Join-Path $root 'setup_windows.ps1')
+    if ($LASTEXITCODE -ne 0 -or !(Test-Path -LiteralPath $python)) {
+        throw 'Automatic Windows setup did not complete. Read the error above.'
+    }
+}
 if (!(Get-Command ffmpeg -ErrorAction SilentlyContinue) -and
     !(Test-Path -LiteralPath (Join-Path $root 'tools\ffmpeg.exe'))) {
     throw 'FFmpeg is missing. Add its bin directory to PATH or read tools/README.md.'
@@ -51,7 +57,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Could not prepare copied training paths.' }
 $env:PATH = (Join-Path $root 'tools') + [IO.Path]::PathSeparator + $env:PATH
 
 Write-Host "Local data: $env:VOICE_PROJECT_WORKSPACE"
-Write-Host 'Showcase (when enabled): http://127.0.0.1:7862/'
+Write-Host 'Integrated page (opens automatically): http://127.0.0.1:7862/'
 Write-Host 'Training (when enabled): http://127.0.0.1:7860/'
 Write-Host 'Augmentation (when enabled): http://127.0.0.1:7876/'
 Write-Host 'Keep this console open. Press Ctrl+C to stop the server.'

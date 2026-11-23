@@ -38,3 +38,16 @@ def test_default_workspace_stays_in_repository(monkeypatch):
         'from speech_emotion.workspace import DEFAULT_WORKSPACE_ROOT; print(DEFAULT_WORKSPACE_ROOT)'],
         env=env,cwd=root,check=True,capture_output=True,text=True,encoding='utf-8')
     assert Path(result.stdout.strip())==root/'workspace'
+
+
+def test_cross_platform_one_click_launchers_open_the_integrated_showcase():
+    root = Path(__file__).resolve().parents[1]
+    windows = (root / "start_windows.ps1").read_text(encoding="utf-8-sig")
+    macos = (root / "啟動全部_macOS.command").read_text(encoding="utf-8")
+    runner = (root / "scripts" / "run_competition_demo.py").read_text(encoding="utf-8")
+
+    assert "setup_windows.ps1" in windows
+    assert "run_competition_demo.py" in windows
+    assert "run_competition_demo.py" in macos
+    assert runner.count('webbrowser.open_new_tab("http://127.0.0.1:7862/")') == 1
+    assert "for url in" not in runner
