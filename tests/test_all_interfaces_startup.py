@@ -17,7 +17,7 @@ def test_all_interfaces_launch_before_blocking(monkeypatch):
     monkeypatch.setattr(runner.webbrowser,'open_new_tab',lambda url:opened.append(url))
     runner.main()
     assert events==[('training',7860,True),('showcase',7862,True),('augmentation',7876,True),('block',)]
-    assert len(opened)==3 and opened[-1]=='http://127.0.0.1:7876/'
+    assert opened==['http://127.0.0.1:7862/']
     assert all(app.close.call_count==1 for app in apps)
 
 

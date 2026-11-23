@@ -46,9 +46,10 @@ def main() -> None:
                             inbrowser=False, share=False, prevent_thread_lock=True,
                             css=AUGMENTATION_CSS, theme=gr.themes.Default(primary_hue="teal"))
         started.append(augmentation)
-        for url in ("http://127.0.0.1:7860/", "http://127.0.0.1:7862/", "http://127.0.0.1:7876/"):
-            webbrowser.open_new_tab(url)
-            print("Ready: " + url, flush=True)
+        # Keep the training and augmentation services available in the background,
+        # but present one integrated front page after a one-click launch.
+        webbrowser.open_new_tab("http://127.0.0.1:7862/")
+        print("Integrated showcase ready: http://127.0.0.1:7862/", flush=True)
         showcase.block_thread()
     finally:
         for app in reversed(started):
