@@ -1,0 +1,25 @@
+torch==2.8.0
+torchvision==0.23.0
+torchaudio==2.8.0
+numpy<2
+transformers==4.38.2
+huggingface-hub==0.25.2
+diffusers==0.24.0
+av==12.3.0
+gradio==3.50.2
+torchmetrics==1.3.2
+torchtyping
+tqdm
+ffmpeg-python==0.2.0
+facenet-pytorch==2.5.0
+moviepy==1.0.3
+einops==0.4.1
+omegaconf==2.3.0
+opencv-python<4.12
+librosa
+soundfile
+scipy==1.14.1
+# Gradio 3.50 uses the pre-Starlette-1 template API.
+fastapi==0.103.2
+starlette==0.27.0
+pydantic==2.4.2
